@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('./Karla-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./Inter-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+body {
+    min-width: 200px;
+    max-width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ECFDF5;
+    color: #2B283A;
+    margin-top: 0px;
+    padding: 20px;
+    font-family: Karla, sans-serif;
+    font-size: 20px;
+    background-size: cover;
+    opacity: 1;
+}
+
+p {
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 300;
+    margin-top: -14px;
+    color: #6B7280;
+}
+
+button {
+    background-color: #10B981;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-family: Inter;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: none;
+}
+
+.secondary-title {
+    margin-top: -29px;
+    color: #10B981;
+}
+
+.toggle-text {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+#toggle-feedback {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #10B981;
+}
+
+.passwords-box {
+    display: flex;
+    border-top: 1px solid #D5D4D8;
+    width: 480px;
+}
+
+.password-field {
+    width: 225px;
+    margin: 12px;
+    margin-top: 34px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: #273549;
+    border: none;
+    color: #10B981;
+}
+
+#pass-length {
+    width: 30px;
+    height: 21px;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-family: Inter;
+    color: #1F2937;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #D5D4D8;
+}
+
+#pass1 {
+    margin-left: 0px;
+    text-align: center;
+    font-size: 26px;
+}
+
+#pass2 {
+    margin-right: 0px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.feedback-box {
+    display: flex;
+    width: 480px;
+    gap: 200px;
+    margin-left: 85px;
+    margin-top: 10px;
+    color: #10B981;
+}
+
+#popup-1, #popup-2 {
+    font-size: 16px;
+    opacity: 0%;
+    color: #1F2937;
+    font-weight: 400px;
+}
+
+#gap {
+    margin-left: 30px;
+    font-weight: 900;
+}
+
+/* Toggle button switch */
+
+.switchbackground {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switchbackground input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switchbackground .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #273549;
+    transition: 0.4s;
+}
+
+.switchbackground .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #10B981;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #A7F2D9;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#dark-mod {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;    
+}
+
+#small-btn {
+    margin-top: 0px;
+    height: 55px;
+    background-color: #ECFDF5;
+    font-size: 25px;
+    border-bottom: 4px solid #10B981;
+    margin-bottom: 0px;
+    color: #10B981;
+    padding: 15px;
+    padding-bottom: 40px;
+    
+}
+
+/* Hide spinners on the pass-lenght input*/
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* Same as abov, but specific For Firefox */
+    input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+/* Dark Mode Style */
+
+body.dark-mode {
+    background-color: #1F2937;  
+    color: #F3F4F6;  
+
+body.dark-mode .secondary-title {
+    color: #A7F2D9;
+}
+
+body.dark-mode p {
+    color: #D1D5DB; 
+}
+
+body.dark-mode button {
+    background-color: #A7F2D9;
+    color: #1F2937;
+}
+
+body.dark-mode .password-field {
+    background-color: #273549; 
+    color: #A7F2D9; 
+}
+
+body.dark-mode #pass-length {
+    color: #1F2937;
+    background-color: #FFFFFF; 
+}
+
+body.dark-mode #popup-1, body.dark-mode #popup-2 {
+    color: #A7F2D9;
+}
+
+body.dark-mode .passwords-box {
+    border-top: 1px solid #4B5563;
+}
+
+body.dark-mode .feedback-box {
+    color: #A7F2D9;
+}
+
+body.dark-mode #small-btn {
+    background-color: #273549; 
+    border-bottom: 4px solid #D1D5DB; 
+    color: #A7F2D9; 
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div>
+            <div id="dark-mod">
+                <button onclick="toggleDarkMode()" id="small-btn" >🌗</button>
+            </div>
+            <h1>Generate a</h1>
+            <h1 class="secondary-title">random password</h1>
+            <p> Never use an insecure password again. </p>
+            
+            <div class="toggle-container">
+                 <label class="switchbackground">
+                     <input type="checkbox" id="checker" onclick="isChecked()">
+                     <span class="slider round"></span>
+                 </label>
+                 <p class="toggle-text">Use Special Characters?</p>
+                 <p id="toggle-feedback">No, thanks</p>
+            </div>  
+        </div>
+        <div>
+            <button onclick="newPassword()">Generate Passwords</button>
+            <button class="btn-arrow" id="gap" onclick="subtract1()">◀</button>
+            <input id="pass-length" type="number" min="1" max="20" oninput="this.value = Math.min(Math.max(this.value, this.min), this.max)">
+            <button class="btn-arrow" id="right-object" onclick="sum1()">▶</button>
+        </div>
+        <div class="passwords-box">
+            <input class="password-field" id="pass1" onclick="copy(event)">
+            <input class="password-field" id="pass2" onclick="copy(event)">
+        </div> 
+        <div class="feedback-box"> 
+            <p class="feedback-text" id="popup-1">Copied!</p>
+            <p class="feedback-text" id="popup-2">Copied!</p>
+        </div>
+            <script src="index.js" defer></script>  
+    </body>
+</html>
